@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HW-11</title>
   
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <!-- <link rel="stylesheet" href="./simple-lightbox.css"> -->
+  <link rel="stylesheet" href="./css/style.css" />
 
 </head>
 
 <body>
-  <form class="js-search-form">
-    <input
+  <form class="js-search-form search-form">
+    <input class="search-input"
     type="text"
     name="searchQuery"
     autocomplete="off"
@@ -21,8 +20,8 @@
   />
     <button type="submit" class="btn">Search</button>
   </form>
-  <div class="js-result-container"></div>
-  <button type="submit" class="more-button">Load More</button>
+  <div class="js-result-container gallery"></div>
+  <button type="submit" class="btn more-button hidden">Load More</button>
   <!-- <include src="./partials/example.html"></include> -->
   <script type="module" src="./index.js"></script>
 </body>

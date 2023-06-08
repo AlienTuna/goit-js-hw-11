@@ -1,10 +1,9 @@
 // import axios from "axios";
 
-// const axios = require('axios').default;
-// const ax = new axios;
+const axios = require('axios').default;
 const API_KEY = '29596647-f7db787be5835d1b0c2ce2eda'
 const API_URL = 'https://pixabay.com/api/'
-const PER_PAGE = 3
+const PER_PAGE = 40
 const SET = '&image_type=photo&orientation=horizontal&safesearch=true&category=backgrounds'
 
 export default class ImagesApi {
