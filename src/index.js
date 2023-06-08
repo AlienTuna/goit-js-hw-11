@@ -3,7 +3,6 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.css";
 import ImagesApi from "./js/images-api";
-import galleryTpl from './templates/gallery.hbs';
 
 // const axios = require('axios').default;
 
@@ -35,8 +34,27 @@ async function onLoadMore() {
 
 }
 
-function renderGallery(json) {
-    refs.resultContainer.insertAdjacentHTML('beforeend', galleryTpl(json))
+function renderGallery(imagesData) {
+    const markup = imagesData.map(img => `
+    <div href="${img.largeImageURL}" class="photo-card">
+    <img src="${img.webformatURL}" alt="${img.tags}" loading="lazy" />
+    <div class="info">
+        <p class="info-item">
+        <b>Likes: ${img.likes}</b>
+        </p>
+        <p class="info-item">
+        <b>Views: ${img.views}</b>
+        </p>
+        <p class="info-item">
+        <b>Comments: ${img.comments}</b>
+        </p>
+        <p class="info-item">
+        <b>Downloads: ${img.downloads}</b>
+        </p>
+    </div>
+</div>
+    `).join('')
+    refs.resultContainer.insertAdjacentHTML('beforeend', markup)
     lightbox.refresh();
 }
 
