@@ -1,2 +1,9 @@
 @import './common';
 @import './example';
+@import '../../node_modules/simplelightbox/dist/simple-lightbox.css';
+body {
+    background-color: #002f44;
+}
+.photo-card {
+    max-width: 100px;
+}
