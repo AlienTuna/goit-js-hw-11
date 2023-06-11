@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 const API_KEY = '29596647-f7db787be5835d1b0c2ce2eda'
 const API_URL = 'https://pixabay.com/api/'
-const PER_PAGE = 40
+// const PER_PAGE = 40
 // const SET = '&image_type=photo&orientation=horizontal&safesearch=true&category=backgrounds'
 
 export default class ImagesApi {
@@ -9,6 +9,7 @@ export default class ImagesApi {
         this.searchQuery = '';
         this.page = 1;
         this.totalHits = '';
+        this.perPage = 40;
     }
 
     async fetchImages() {
@@ -18,7 +19,7 @@ export default class ImagesApi {
                     key: API_KEY,
                     q: this.searchQuery,
                     page: this.page,
-                    per_page: PER_PAGE,
+                    per_page: this.perPage,
                     image_type: 'photo',
                     orientation: 'horizontal',
                     safesearch: 'true',
@@ -54,5 +55,9 @@ export default class ImagesApi {
     }
     get hits() {
         return this.totalHits;
+    }
+
+    get maxCount() {
+        return this.perPage
     }
 }

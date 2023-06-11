@@ -7,9 +7,7 @@
 body {
     background-color: #002f44;
     text-align: center;
-    font-family: fantasy;
-   
-    /* text-align: center; */
+    font-family:Arial, Helvetica, sans-serif;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -24,7 +22,8 @@ img {
 
 
 
-.search-form {
+.search-form,
+.result-footer {
     width:100%;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -120,3 +119,9 @@ img {
     justify-content: space-around;
 }
 
+.result-footer {
+    color: var(--txt-main-color);
+    font-size: 30;
+
+    background-color: ;
+}
