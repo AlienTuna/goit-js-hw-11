@@ -1,7 +1,6 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.css";
 import refs from "./refs";
-import ImagesApi from "./images-api";
 
 const lightbox = new SimpleLightbox('.photo-card');
 

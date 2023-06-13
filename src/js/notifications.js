@@ -45,6 +45,5 @@ export default class Notification {
                 textColor: '#c7b75b',
               },
         })
-        console.log('notifications init');
      }
 }
